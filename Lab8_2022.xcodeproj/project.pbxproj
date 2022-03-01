@@ -15,6 +15,8 @@
 		F37FCFC027CE9F9100C44964 /* Lab8_2022Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FCFBF27CE9F9100C44964 /* Lab8_2022Tests.swift */; };
 		F37FCFCA27CE9F9100C44964 /* Lab8_2022UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FCFC927CE9F9100C44964 /* Lab8_2022UITests.swift */; };
 		F37FCFCC27CE9F9100C44964 /* Lab8_2022UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FCFCB27CE9F9100C44964 /* Lab8_2022UITestsLaunchTests.swift */; };
+		F37FCFD827CE9FEA00C44964 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FCFAE27CE9F8F00C44964 /* ContentView.swift */; };
+		F37FCFD927CE9FEA00C44964 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FCFAE27CE9F8F00C44964 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -270,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F37FCFD827CE9FEA00C44964 /* ContentView.swift in Sources */,
 				F37FCFC027CE9F9100C44964 /* Lab8_2022Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +283,7 @@
 			files = (
 				F37FCFCA27CE9F9100C44964 /* Lab8_2022UITests.swift in Sources */,
 				F37FCFCC27CE9F9100C44964 /* Lab8_2022UITestsLaunchTests.swift in Sources */,
+				F37FCFD927CE9FEA00C44964 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
