@@ -9,20 +9,37 @@ import SwiftUI
 import RealityKit
 
 struct ContentView : View {
+    @State var score: UInt = 0
     var body: some View {
-        ARViewContainer().edgesIgnoringSafeArea(.all)
+        VStack {
+            let ar = ARViewContainer(score: $score)
+            ar.edgesIgnoringSafeArea(.all)
+            Text("Score: \(score)")
+            Button("Play") {
+                ar.callOrbit()
+            }
+        }
     }
+
 }
 
 struct ARViewContainer: UIViewRepresentable {
+    @Binding var score: UInt
+    let worldAnchor = try! Experience.loadWorld()
+    
+    func callOrbit() -> Void {
+        worldAnchor.notifications.orbitBoard.post()
+    }
     
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
         
-        // Load the "Box" scene from the "Experience" Reality File
-        let worldAnchor = try! Experience.loadWorld()
-        
+        self.worldAnchor.actions.ballWasHit.onAction = { entity in
+            if entity?.name == "ball" {
+                score += 1
+            }
+        }
         // Add the box anchor to the scene
         arView.scene.anchors.append(worldAnchor)
         
